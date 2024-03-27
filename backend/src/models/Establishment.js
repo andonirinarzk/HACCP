@@ -4,7 +4,6 @@ export default (sequelize, DataTypes) => {
         Name: DataTypes.STRING,
         Address: DataTypes.STRING,
         Type: DataTypes.STRING,
-        GroupID: { type: DataTypes.INTEGER, allowNull: true, references: { model: 'Group', key: 'GroupID' } }
     });
     return Establishment;
 };

@@ -4,7 +4,7 @@ const User = sequelize.define('User', {
     Username: DataTypes.STRING,
     FullName: DataTypes.STRING,
     Role: DataTypes.STRING,
-    EstablishmentID: { type: DataTypes.INTEGER, references: { model: 'Establishment', key: 'EstablishmentID' } }
+
 });
 return User;
 };
