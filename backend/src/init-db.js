@@ -1,5 +1,8 @@
 import mysql from 'mysql2/promise';
 import { sequelize } from './models/index.js';
+import setupRelations from './models/relations.js';
+
+setupRelations();
 
 async function createDatabase() {
     try {
