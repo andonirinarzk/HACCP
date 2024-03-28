@@ -4,6 +4,7 @@ export default (sequelize, DataTypes) => {
         Name: DataTypes.STRING,
         Address: DataTypes.STRING,
         Type: DataTypes.STRING,
+        GroupID: DataTypes.INTEGER,
     });
     return Establishment;
 };

@@ -4,6 +4,8 @@ export default (sequelize, DataTypes) => {
         Type: DataTypes.STRING,
         Quantity: DataTypes.INTEGER,
         TransactionDate: DataTypes.DATE,
+        LotID: DataTypes.INTEGER,
+        EstablishmentID: DataTypes.INTEGER,
 
     });
     return InventoryTransaction;

@@ -1,8 +1,5 @@
 import mysql from 'mysql2/promise';
 import { sequelize } from './models/index.js';
-import setupRelations from './models/relations.js';
-
-setupRelations();
 
 async function createDatabase() {
     try {
@@ -14,9 +11,8 @@ async function createDatabase() {
         await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.MARIADB_DATABASE}`);
         await connection.end();
 
-        console.log("Base de données créée ou déjà existante");
-
-        await sequelize.sync({ force: false });
+        console.log("Synchronizing models with database...");
+        await sequelize.sync({ force: true });
         console.log('Models synchronized successfully!');
     } catch (error) {
         console.error('Error during database creation or model synchronization:', error);

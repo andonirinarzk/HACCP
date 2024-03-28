@@ -4,7 +4,8 @@ export default (sequelize, DataTypes) => {
         ReceivedDate: DataTypes.DATE,
         ExpirationDate: DataTypes.DATE,
         QuantityInitial: DataTypes.INTEGER,
-        CurrentQuantity: DataTypes.INTEGER
+        CurrentQuantity: DataTypes.INTEGER,
+        ProductID: DataTypes.INTEGER,
     });
     return Lot;
 };

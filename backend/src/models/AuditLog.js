@@ -4,7 +4,8 @@ export default (sequelize, DataTypes) => {
         Description: DataTypes.STRING,
         Timestamp: DataTypes.DATE,
         AffectedTable: DataTypes.STRING,
-        RecordID: DataTypes.INTEGER
+        RecordID: DataTypes.INTEGER,
+        UserID: DataTypes.INTEGER,
     });
     return AuditLog;
 };
