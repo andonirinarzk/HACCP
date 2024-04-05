@@ -1,5 +1,8 @@
+import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import { sequelize } from './models/index.js';
+
+dotenv.config();
 
 async function createDatabase() {
     try {

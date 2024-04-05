@@ -1,7 +1,13 @@
 const setupRelations = (models) => {
-    // User et Establishment
-    models.User.belongsTo(models.Establishment, { foreignKey: 'EstablishmentID' });
-    models.Establishment.hasMany(models.User, { foreignKey: 'EstablishmentID' });
+    // User et Establishment (Relation Many-to-Many)
+    models.User.belongsToMany(models.Establishment, { 
+        through: models.UserEstablishment,
+        foreignKey: 'UserID' 
+    });
+    models.Establishment.belongsToMany(models.User, { 
+        through: models.UserEstablishment,
+        foreignKey: 'EstablishmentID' 
+    });
 
     // Lot et Product
     models.Lot.belongsTo(models.Product, { foreignKey: 'ProductID' });

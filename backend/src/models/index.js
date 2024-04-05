@@ -21,6 +21,7 @@ import MealSampleModel from './MealSample.js';
 import ProductModel from './Product.js';
 import StorageUnitModel from './StorageUnit.js';
 import UserModel from './User.js';
+import UserEstablishmentModel from './UserEstablishment.js';
 
 // initialiser les modèles
 const Group = GroupModel(sequelize, Sequelize.DataTypes);
@@ -34,6 +35,7 @@ const Lot = LotModel(sequelize, Sequelize.DataTypes);
 const AuditLog = AuditLogModel(sequelize, Sequelize.DataTypes);
 const User = UserModel(sequelize, Sequelize.DataTypes);
 const InventoryTransaction = InventoryTransactionModel(sequelize, Sequelize.DataTypes);
+const UserEstablishment = UserEstablishmentModel(sequelize, Sequelize.DataTypes);
 
 
 
@@ -49,6 +51,7 @@ const models = {
     User,
     AuditLog,
     InventoryTransaction,
+    UserEstablishment
 };
 
 // Initialiser les relations entre les modèles
