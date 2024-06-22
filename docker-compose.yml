@@ -1,0 +1,46 @@
+version: "3.8"
+services:
+  database:
+    image: postgres:latest
+    container_name: tracability_db
+    environment:
+      POSTGRES_USER: yourusername
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: yourdatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backends/tracability
+    container_name: tracability_backend
+    environment:
+      DATABASE_URL: postgres://yourusername:yourpassword@database:5432/yourdatabase
+    ports:
+      - "4000:4000"
+    depends_on:
+      - database
+
+  gateway:
+    build: ./gateway
+    container_name: tracability_gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+  frontend:
+    build: ./frontend
+    container_name: tracability_frontend
+    ports:
+      - "3000:3000"
+
+  mobile:
+    build: ./mobile
+    container_name: tracability_mobile
+    ports:
+      - "8081:8081"
+
+volumes:
+  postgres_data:

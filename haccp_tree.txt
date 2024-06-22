@@ -1,0 +1,135 @@
+.
+├── backends
+│   └── tracability
+│       ├── package.json
+│       ├── package-lock.json
+│       ├── src
+│       │   ├── app.js
+│       │   ├── config
+│       │   │   └── databases.js
+│       │   ├── index.js
+│       │   └── models
+│       │       ├── auditLog.js
+│       │       ├── establishment.js
+│       │       ├── group.js
+│       │       ├── index.js
+│       │       ├── inventoryTransaction.js
+│       │       ├── lot.js
+│       │       ├── mealComposition.js
+│       │       ├── meal.js
+│       │       ├── mealSample.js
+│       │       ├── product.js
+│       │       ├── storageUnit.js
+│       │       └── user.js
+│       └── tests
+│           └── app.test.js
+├── databases
+│   └── docker-compose.yml
+├── docker-compose.yml
+├── frontend
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── graphql
+│   │   │   └── client.js
+│   │   ├── index.css
+│   │   └── main.jsx
+│   └── vite.config.js
+├── gateway
+│   ├── gateway.config.yml
+│   ├── package.json
+│   └── package-lock.json
+├── haccp_tree.txt
+└── mobile
+    ├── android
+    │   ├── app
+    │   │   ├── build.gradle
+    │   │   ├── debug.keystore
+    │   │   ├── proguard-rules.pro
+    │   │   └── src
+    │   │       ├── debug
+    │   │       │   └── AndroidManifest.xml
+    │   │       └── main
+    │   │           ├── AndroidManifest.xml
+    │   │           ├── java
+    │   │           │   └── com
+    │   │           │       └── mobile
+    │   │           │           ├── MainActivity.kt
+    │   │           │           └── MainApplication.kt
+    │   │           └── res
+    │   │               ├── drawable
+    │   │               │   └── rn_edit_text_material.xml
+    │   │               ├── mipmap-hdpi
+    │   │               │   ├── ic_launcher.png
+    │   │               │   └── ic_launcher_round.png
+    │   │               ├── mipmap-mdpi
+    │   │               │   ├── ic_launcher.png
+    │   │               │   └── ic_launcher_round.png
+    │   │               ├── mipmap-xhdpi
+    │   │               │   ├── ic_launcher.png
+    │   │               │   └── ic_launcher_round.png
+    │   │               ├── mipmap-xxhdpi
+    │   │               │   ├── ic_launcher.png
+    │   │               │   └── ic_launcher_round.png
+    │   │               ├── mipmap-xxxhdpi
+    │   │               │   ├── ic_launcher.png
+    │   │               │   └── ic_launcher_round.png
+    │   │               └── values
+    │   │                   ├── strings.xml
+    │   │                   └── styles.xml
+    │   ├── build.gradle
+    │   ├── gradle
+    │   │   └── wrapper
+    │   │       ├── gradle-wrapper.jar
+    │   │       └── gradle-wrapper.properties
+    │   ├── gradle.properties
+    │   ├── gradlew
+    │   ├── gradlew.bat
+    │   └── settings.gradle
+    ├── app.json
+    ├── App.tsx
+    ├── babel.config.js
+    ├── Gemfile
+    ├── index.js
+    ├── ios
+    │   ├── mobile
+    │   │   ├── AppDelegate.h
+    │   │   ├── AppDelegate.mm
+    │   │   ├── Images.xcassets
+    │   │   │   ├── AppIcon.appiconset
+    │   │   │   │   └── Contents.json
+    │   │   │   └── Contents.json
+    │   │   ├── Info.plist
+    │   │   ├── LaunchScreen.storyboard
+    │   │   ├── main.m
+    │   │   └── PrivacyInfo.xcprivacy
+    │   ├── mobileTests
+    │   │   ├── Info.plist
+    │   │   └── mobileTests.m
+    │   ├── mobile.xcodeproj
+    │   │   ├── project.pbxproj
+    │   │   └── xcshareddata
+    │   │       └── xcschemes
+    │   │           └── mobile.xcscheme
+    │   └── Podfile
+    ├── jest.config.js
+    ├── metro.config.js
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    ├── src
+    │   └── graphql
+    │       └── client.js
+    ├── __tests__
+    │   └── App.test.tsx
+    └── tsconfig.json
+
+43 directories, 89 files

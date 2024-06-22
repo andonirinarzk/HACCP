@@ -2,27 +2,25 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const User = sequelize.define('User', {
-  UserID: {
+  username: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  fullName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  establishmentId: {
     type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  Username: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  FullName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  Role: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  EstablishmentID: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
+    references: {
+      model: 'Establishments',
+      key: 'id'
+    }
+  }
 });
 
 module.exports = User;

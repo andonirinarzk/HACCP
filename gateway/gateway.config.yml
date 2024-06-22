@@ -1,0 +1,33 @@
+# gateway.config.yml
+http:
+  port: 8080
+
+admin:
+  port: 9876
+  host: localhost
+
+apiEndpoints:
+  api:
+    host: '*'
+
+serviceEndpoints:
+  tracability:
+    url: 'http://localhost:3000'
+
+policies:
+  - basic-auth
+  - cors
+  - log
+  - proxy
+  - rate-limit
+  - key-auth
+  - oauth2
+
+pipelines:
+  default:
+    apiEndpoints:
+      - api
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: tracability
